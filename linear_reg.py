@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt 
 np.set_printoptions(threshold=np.inf, linewidth=np.nan)
-!pwd
+
 
 #Importing DataSet 
 dataset = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/swe/kc_house_data.csv")
