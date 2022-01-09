@@ -39,18 +39,3 @@ regressor.fit(xtrain, ytrain)
 #Predicting the prices
 pred = regressor.predict(xtest)
 
-#Visualizing the training Test Results 
-plt.scatter(xtrain, ytrain, color= 'red')
-plt.plot(xtrain, regressor.predict(xtrain), color = 'blue')
-plt.title ("Visuals for Training Dataset")
-plt.xlabel("Space")
-plt.ylabel("Price")
-plt.show()
-
-#Visualizing the Test Results 
-plt.scatter(xtest, ytest, color= 'red')
-plt.plot(xtrain, regressor.predict(xtrain), color = 'blue')
-plt.title("Visuals for Test DataSet")
-plt.xlabel("Space")
-plt.ylabel("Price")
-plt.show()
