@@ -4,3 +4,4 @@ scikit-learn
 flask
 flask_restful
 scipy
+matplotlib.pyplot
