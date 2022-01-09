@@ -1,11 +1,3 @@
 pandas
 numpy
 scikit-learn
-flask
-flask_restful
-scipy
-
-flask
-gunicorn
-xgboost
-sklearn
