@@ -1,24 +1,17 @@
 
-# This Python 3 environment comes with many helpful analytics libraries installed
-# It is defined by the kaggle/python docker image: https://github.com/kaggle/docker-python
-# For example, here's several helpful packages to load in 
-
-import numpy as np # linear algebra
-import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-
-
-
-# Any results you write to the current directory are saved as output.
 
 #Import Libraries
 import numpy as np 
 import pandas as pd 
+import matplotlib.pyplot as plt 
+np.set_printoptions(threshold=np.inf, linewidth=np.nan)
+
 
 np.set_printoptions(threshold=np.inf, linewidth=np.nan)
 
 
 #Importing DataSet 
-dataset = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/swe/kc_house_data.csv")
+dataset = pd.read_csv("kc_house_data.csv")
 space=dataset['sqft_living'] #space 
 price=dataset['price'] # vs price 
 
@@ -38,4 +31,20 @@ regressor.fit(xtrain, ytrain)
 
 #Predicting the prices
 pred = regressor.predict(xtest)
+
+#Visualizing the training Test Results 
+plt.scatter(xtrain, ytrain, color= 'red')
+plt.plot(xtrain, regressor.predict(xtrain), color = 'blue')
+plt.title ("Visuals for Training Dataset")
+plt.xlabel("Space")
+plt.ylabel("Price")
+plt.show()
+
+#Visualizing the Test Results 
+plt.scatter(xtest, ytest, color= 'red')
+plt.plot(xtrain, regressor.predict(xtrain), color = 'blue')
+plt.title("Visuals for Test DataSet")
+plt.xlabel("Space")
+plt.ylabel("Price")
+plt.show()
 
